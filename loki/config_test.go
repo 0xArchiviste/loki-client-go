@@ -6,8 +6,8 @@ import (
 	"testing"
 	"time"
 
-	"github.com/sal-ali/loki-client-go/pkg/backoff"
-	"github.com/sal-ali/loki-client-go/pkg/urlutil"
+	"github.com/Sal-Ali/loki-client-go/pkg/backoff"
+	"github.com/Sal-Ali/loki-client-go/pkg/urlutil"
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 
