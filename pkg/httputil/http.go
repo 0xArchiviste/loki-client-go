@@ -10,7 +10,7 @@ import (
 	"net/http"
 	"strings"
 
-	"github.com/blang/semver"
+	"github.com/blang/semver/v4"
 	"github.com/gogo/protobuf/proto"
 	"github.com/golang/snappy"
 	"github.com/opentracing/opentracing-go"
