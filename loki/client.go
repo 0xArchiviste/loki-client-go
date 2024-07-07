@@ -350,8 +350,9 @@ func (c *Client) send(ctx context.Context, tenantID string, buf []byte) (int, er
 			line = scanner.Text()
 		}
 		err = fmt.Errorf("server returned HTTP status %s (%d): %s", resp.Status, resp.StatusCode, line)
+		bytes.NewReader(buf).WriteTo(os.Stderr)
+		fmt.Println("error: ", err)
 	}
-	fmt.Println("error: ", err)
 	return resp.StatusCode, err
 }
 
