@@ -286,7 +286,7 @@ func (c *Client) sendBatch(tenantID string, batch *batch) {
 				var lblSet model.LabelSet
 				for i := range lbls {
 					if lbls[i].Name == LatencyLabel {
-						fmt.Println(lbls[i].Name, lbls[i].Value)
+						// fmt.Println(lbls[i].Name, lbls[i].Value)
 						lblSet = model.LabelSet{
 							model.LabelName(HostLabel):    model.LabelValue(c.cfg.URL.Host),
 							model.LabelName(LatencyLabel): model.LabelValue(lbls[i].Value),
@@ -351,6 +351,7 @@ func (c *Client) send(ctx context.Context, tenantID string, buf []byte) (int, er
 		}
 		err = fmt.Errorf("server returned HTTP status %s (%d): %s", resp.Status, resp.StatusCode, line)
 	}
+	fmt.Println("error: ", err)
 	return resp.StatusCode, err
 }
 
