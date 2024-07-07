@@ -286,6 +286,7 @@ func (c *Client) sendBatch(tenantID string, batch *batch) {
 				var lblSet model.LabelSet
 				for i := range lbls {
 					if lbls[i].Name == LatencyLabel {
+						fmt.Println(lbls[i].Name, lbls[i].Value)
 						lblSet = model.LabelSet{
 							model.LabelName(HostLabel):    model.LabelValue(c.cfg.URL.Host),
 							model.LabelName(LatencyLabel): model.LabelValue(lbls[i].Value),
