@@ -1,4 +1,4 @@
-Forked and fixed to work in 2024.
+Forked and fixed to work in 2025.
 
 # Loki Go client (Experimental. DO NOT USE IT)
 
